@@ -1,37 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
   <title id="title">DSH Plugins</title>
-  <desc id="desc">A curated guide to DeepSeek Harness plugins with functions, audiences, and practical tips.</desc>
+  <desc id="desc">好用的、热门的、有点意思的 DeepSeek Harness 插件，都在这里。</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="0.55" stop-color="#0b2442"/>
-      <stop offset="1" stop-color="#0c4a6e"/>
+      <stop offset="0" stop-color="#17103b"/>
+      <stop offset="0.48" stop-color="#45228a"/>
+      <stop offset="1" stop-color="#087ea4"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#22c55e"/>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4b5fd"/>
+      <stop offset="0.5" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#86efac"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="18"/>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.19"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.12"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#09051d" flood-opacity="0.32"/>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="28"/>
     </filter>
   </defs>
-  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
-  <circle cx="1040" cy="70" r="150" fill="#38bdf8" opacity="0.12" filter="url(#glow)"/>
-  <circle cx="135" cy="330" r="150" fill="#22c55e" opacity="0.10" filter="url(#glow)"/>
-  <g transform="translate(82 78)">
-    <rect x="0" y="0" width="86" height="86" rx="22" fill="#0f2946" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M31 16v19H16v16h15v19h16V51h15V35H47V16z" fill="url(#accent)"/>
-    <circle cx="23" cy="23" r="4" fill="#e0f2fe"/>
-    <circle cx="63" cy="63" r="4" fill="#dcfce7"/>
+
+  <rect width="1200" height="400" rx="30" fill="url(#bg)"/>
+  <rect width="1200" height="400" rx="30" fill="url(#dots)"/>
+  <circle cx="1048" cy="54" r="170" fill="#22d3ee" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="95" cy="405" r="190" fill="#a78bfa" opacity="0.18" filter="url(#glow)"/>
+
+  <g transform="translate(70 61)">
+    <g>
+      <rect x="0" y="0" width="62" height="30" rx="15" fill="#ffffff" opacity="0.13"/>
+      <circle cx="17" cy="15" r="5" fill="#86efac"/>
+      <text x="29" y="20" fill="#e9d5ff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700">DSH</text>
+    </g>
+
+    <text x="0" y="111" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="72" font-weight="850" letter-spacing="1">DSH PLUGINS</text>
+    <rect x="2" y="130" width="440" height="6" rx="3" fill="url(#brand)"/>
+    <text x="0" y="186" fill="#f5f3ff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="29" font-weight="650">好用的 · 热门的 · 有点意思的，都在这里</text>
+    <text x="0" y="229" fill="#c4e9f6" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="19">DeepSeek Harness 插件中文导航与避坑指南</text>
+
+    <g transform="translate(0 260)" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14" font-weight="650">
+      <rect x="0" y="0" width="124" height="36" rx="18" fill="#ffffff" opacity="0.13"/>
+      <text x="20" y="23" fill="#ede9fe">16 个精选插件</text>
+      <rect x="138" y="0" width="98" height="36" rx="18" fill="#ffffff" opacity="0.13"/>
+      <text x="158" y="23" fill="#cffafe">7 大场景</text>
+      <rect x="250" y="0" width="122" height="36" rx="18" fill="#ffffff" opacity="0.13"/>
+      <text x="270" y="23" fill="#dcfce7">人工筛选整理</text>
+    </g>
   </g>
-  <text x="205" y="139" fill="#f8fafc" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="760" letter-spacing="1">DSH Plugins</text>
-  <rect x="207" y="165" width="355" height="5" rx="2.5" fill="url(#accent)"/>
-  <text x="82" y="235" fill="#bae6fd" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="27" font-weight="560">功能 · 适用人群 · 贴心 Tips</text>
-  <text x="82" y="282" fill="#94a3b8" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21">A human-curated field guide to the fast-moving DeepSeek Harness ecosystem.</text>
-  <g transform="translate(890 168)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M42 0v26M42 74v26M0 42h26M74 42h26" stroke="#38bdf8" stroke-width="8"/>
-    <rect x="25" y="25" width="34" height="34" rx="8" stroke="#f8fafc" stroke-width="7"/>
-    <path d="M123 8h83a18 18 0 0 1 18 18v83" stroke="#22c55e" stroke-width="5" opacity="0.8"/>
-    <path d="M224 141v31a18 18 0 0 1-18 18h-83" stroke="#38bdf8" stroke-width="5" opacity="0.65"/>
-  </g>
+
+  <rect x="900" y="57" width="248" height="78" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.22"/>
+  <rect x="918" y="72" width="48" height="48" rx="14" fill="#8b5cf6"/>
+  <path d="M932 86h20v20h-20zM937 91v10h10V91z" fill="#ffffff" fill-rule="evenodd" opacity="0.95"/>
+  <text x="982" y="88" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="800">WORKBENCH</text>
+  <text x="982" y="110" fill="#ddd6fe" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">Web UI · TUI · Sidebar</text>
+
+  <rect x="922" y="160" width="226" height="78" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.22"/>
+  <rect x="940" y="175" width="48" height="48" rx="14" fill="#06b6d4"/>
+  <path d="M950 199c8-12 21-12 29 0-8 12-21 12-29 0z" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="964.5" cy="199" r="4.5" fill="#ffffff"/>
+  <text x="1004" y="191" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="800">VISION</text>
+  <text x="1004" y="213" fill="#cffafe" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">OCR · Images · UI QA</text>
+
+  <rect x="890" y="263" width="258" height="78" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.22"/>
+  <rect x="908" y="278" width="48" height="48" rx="14" fill="#22c55e"/>
+  <circle cx="925" cy="295" r="6" fill="#ffffff"/>
+  <circle cx="940" cy="295" r="6" fill="#ffffff" opacity="0.8"/>
+  <path d="M916 315c2-9 16-11 20-2M930 313c4-7 15-7 18 2" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="972" y="294" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="800">AGENT TEAMS</text>
+  <text x="972" y="316" fill="#dcfce7" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">Workflow · Review · Safety</text>
 </svg>
