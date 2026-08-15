@@ -1,0 +1,15 @@
+{
+  "name": "dsh-plugins-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A curated field guide to DeepSeek Harness plugins.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-catalog.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
+

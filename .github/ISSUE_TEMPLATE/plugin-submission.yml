@@ -1,0 +1,90 @@
+name: Plugin submission
+description: 推荐一个值得收录的 DSH Bundle、Skill、Preset、主题或整合包
+title: "[Plugin]: "
+labels: [submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢推荐。收录不等于安全审计；请提供可核验的一手资料，并披露商业关系。
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: 公开 GitHub 仓库地址
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型
+      options:
+        - Bundle
+        - Skill Pack
+        - Preset
+        - Theme
+        - Integration Pack
+    validations:
+      required: true
+
+  - type: textarea
+    id: function
+    attributes:
+      label: 它解决什么问题？
+      description: 请用 1—3 句话描述可核验功能
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: 适合谁？
+    validations:
+      required: true
+
+  - type: textarea
+    id: install
+    attributes:
+      label: 安装与验证
+      description: 提供安装命令、兼容版本和验证是否生效的方法
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: tip
+    attributes:
+      label: 贴心 Tip
+      description: 一个能减少踩坑、冲突、成本或排错时间的具体建议
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk
+    attributes:
+      label: 权限、成本与风险
+      description: 是否读取文件/凭证、访问网络、执行构建脚本、使用外部 API 或产生费用？
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 一手来源
+      description: README、Release、兼容矩阵、源码路径或其他原始资料
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: relationship
+    attributes:
+      label: 关系披露
+      options:
+        - label: 我已披露自己是否为作者、维护者、赞助方或商业利益相关者
+          required: true
+        - label: 我理解收录不代表推荐或安全背书
+          required: true
+

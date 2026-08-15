@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">DSH Plugins</title>
+  <desc id="desc">A curated guide to DeepSeek Harness plugins with functions, audiences, and practical tips.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0b2442"/>
+      <stop offset="1" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="1040" cy="70" r="150" fill="#38bdf8" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="135" cy="330" r="150" fill="#22c55e" opacity="0.10" filter="url(#glow)"/>
+  <g transform="translate(82 78)">
+    <rect x="0" y="0" width="86" height="86" rx="22" fill="#0f2946" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M31 16v19H16v16h15v19h16V51h15V35H47V16z" fill="url(#accent)"/>
+    <circle cx="23" cy="23" r="4" fill="#e0f2fe"/>
+    <circle cx="63" cy="63" r="4" fill="#dcfce7"/>
+  </g>
+  <text x="205" y="139" fill="#f8fafc" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="760" letter-spacing="1">DSH Plugins</text>
+  <rect x="207" y="165" width="355" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="82" y="235" fill="#bae6fd" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="27" font-weight="560">功能 · 适用人群 · 贴心 Tips</text>
+  <text x="82" y="282" fill="#94a3b8" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21">A human-curated field guide to the fast-moving DeepSeek Harness ecosystem.</text>
+  <g transform="translate(890 168)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 0v26M42 74v26M0 42h26M74 42h26" stroke="#38bdf8" stroke-width="8"/>
+    <rect x="25" y="25" width="34" height="34" rx="8" stroke="#f8fafc" stroke-width="7"/>
+    <path d="M123 8h83a18 18 0 0 1 18 18v83" stroke="#22c55e" stroke-width="5" opacity="0.8"/>
+    <path d="M224 141v31a18 18 0 0 1-18 18h-83" stroke="#38bdf8" stroke-width="5" opacity="0.65"/>
+  </g>
+</svg>

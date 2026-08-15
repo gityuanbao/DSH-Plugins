@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "title": "DSH Plugins",
+  "as_of": "2026-08-15",
+  "metrics_source": "https://api.github.com/search/repositories?q=topic%3Adsh-plugin&sort=stars&order=desc",
+  "disclaimer": "A listing is not a security audit or an endorsement. DeepSeek Harness is in developer preview.",
+  "plugins": [
+    {
+      "id": "dsh-web-ui",
+      "name": "dsh-web-ui",
+      "repository": "zhu1090093659/dsh-web-ui",
+      "url": "https://github.com/zhu1090093659/dsh-web-ui",
+      "tier": "popular",
+      "type": "integration-pack",
+      "categories": ["ui", "workflow", "remote-access"],
+      "function": "A Web UI plugin and theme pack with a task board, Git graph, file preview, mobile remote access, SSH, vision, usage stats, pets, and themes.",
+      "audiences": ["DSH Web power users", "developers who want an all-in-one workbench"],
+      "install": {
+        "command": "dsh plugin --profile web add @linxin666/dsh-web-ui-all",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Install individual subpackages when you only need one feature; this reduces UI conflicts and makes failures easier to isolate.",
+      "caveats": ["Large permission surface", "pnpm 11 release-age and hoisted-layout details require attention"],
+      "license": "Apache-2.0",
+      "metrics": {
+        "stars": 2223,
+        "forks": 118,
+        "created_at": "2026-08-12T05:15:20Z",
+        "pushed_at": "2026-08-15T07:42:56Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "modlens",
+      "name": "ModLens",
+      "repository": "liustack/modlens",
+      "url": "https://github.com/liustack/modlens",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["vision", "ocr"],
+      "function": "Adds structured image evidence, OCR, layout, entities, and relationships to text-only DSH models.",
+      "audiences": ["frontend developers", "document and screenshot analysts", "users of text-only DeepSeek or GLM models"],
+      "install": {
+        "command": "npx -y @deepseek-ai/dsh plugin --profile web add @liustack/modlens@3.16.6",
+        "profile": "web",
+        "pinned": true,
+        "source": "npm"
+      },
+      "tip": "Run the health check first and use a named `(modlens vision)` route so the actual vision engine and quota source are explicit.",
+      "caveats": ["Images may be sent to a configured external vision provider"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 1494,
+        "forks": 41,
+        "created_at": "2026-02-22T07:12:00Z",
+        "pushed_at": "2026-08-14T20:36:33Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "brooks-lint",
+      "name": "brooks-lint",
+      "repository": "hyhmrright/brooks-lint",
+      "url": "https://github.com/hyhmrright/brooks-lint",
+      "tier": "popular",
+      "type": "skill-pack",
+      "categories": ["code-review", "architecture", "testing"],
+      "function": "Reviews code, architecture, technical debt, and tests using checks grounded in twelve classic software-engineering books.",
+      "audiences": ["reviewers", "legacy-system maintainers", "engineering teams"],
+      "install": {
+        "command": "./scripts/install.sh dsh",
+        "profile": "skill-root",
+        "pinned": false,
+        "source": "git-clone"
+      },
+      "tip": "Start with read-only `/brooks-review` or `/brooks-health`; treat findings as a review checklist before considering auto-fix.",
+      "caveats": ["This is a DSH-discoverable Skill Pack, not a Cordis Bundle", "The flat skill directory layout must be preserved"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 1329,
+        "forks": 62,
+        "created_at": "2026-03-26T11:40:33Z",
+        "pushed_at": "2026-08-14T14:46:25Z"
+      },
+      "verified_sources": ["repository-readme", "dsh-setup-guide", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-anchored-standard",
+      "name": "dsh-anchored-standard",
+      "repository": "xiaobright/dsh-anchored-standard",
+      "url": "https://github.com/xiaobright/dsh-anchored-standard",
+      "tier": "popular",
+      "type": "preset",
+      "categories": ["agent-preset", "experimentation"],
+      "function": "Bootstraps the first model request with Minimal-aligned prompts and tools, then promotes the session to Standard tools.",
+      "audiences": ["benchmarkers", "advanced DSH users", "users investigating first-request behavior"],
+      "install": {
+        "command": "cp -R preset ~/.dsh/.agent-presets/anchored-standard",
+        "profile": "agent-preset",
+        "pinned": false,
+        "source": "git-clone"
+      },
+      "tip": "Use a blank session and verify the first two request headers; do not switch an existing session to this preset.",
+      "caveats": ["Experimental", "Project2 scores do not prove general improvement", "Primary compatibility evidence targets DSH 0.1.0-rc.5"],
+      "license": "NOASSERTION",
+      "metrics": {
+        "stars": 1267,
+        "forks": 37,
+        "created_at": "2026-08-14T14:06:39Z",
+        "pushed_at": "2026-08-15T07:13:25Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic", "community-discussion"]
+    },
+    {
+      "id": "dsh-tui",
+      "name": "dsh-TUI",
+      "repository": "ccch1mneyyy/dsh-TUI",
+      "url": "https://github.com/ccch1mneyyy/dsh-TUI",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["terminal", "ui", "developer-experience"],
+      "function": "A full-screen terminal interface with streaming Markdown, tool cards, file references, session workflows, context metrics, Skills, MCP, and subagents.",
+      "audiences": ["terminal-first developers", "keyboard-heavy users"],
+      "install": {
+        "command": "npm install -g @deepseek-ai/dsh @deepseek-harness-tui/dsh-tui",
+        "profile": "dsh-tui",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "On macOS Terminal use Ctrl-based shortcuts because Command combinations may be consumed by the terminal itself.",
+      "caveats": ["Requires Node ^22.19 or >=24", "Uses the current DSH profile security boundaries rather than providing a separate sandbox"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 1027,
+        "forks": 42,
+        "created_at": "2026-08-13T12:49:31Z",
+        "pushed_at": "2026-08-15T08:09:37Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "aegis",
+      "name": "Aegis",
+      "repository": "GanyuanRan/Aegis",
+      "url": "https://github.com/GanyuanRan/Aegis",
+      "tier": "popular",
+      "type": "bundle-skill-pack",
+      "categories": ["methodology", "verification", "architecture"],
+      "function": "Adds baseline-first, evidence-verified, drift-checked workflows for debugging, architecture work, and long tasks.",
+      "audiences": ["teams running long coding tasks", "spec-driven developers", "architecture maintainers"],
+      "install": {
+        "command": "dsh plugin --profile web add github:GanyuanRan/Aegis",
+        "profile": "web",
+        "pinned": false,
+        "source": "github"
+      },
+      "tip": "Confirm that dump-config contains exactly one Aegis method-pack row and explicitly load `using-aegis` in a fresh session.",
+      "caveats": ["Do not combine bundle installation with another Aegis skill-root installation", "Fresh-host release-level routing evidence is still being completed"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 1012,
+        "forks": 46,
+        "created_at": "2026-04-30T17:40:49Z",
+        "pushed_at": "2026-08-15T00:15:11Z"
+      },
+      "verified_sources": ["repository-readme", "dsh-install-guide", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-better-sidebar",
+      "name": "DSH-better-sidebar",
+      "repository": "omdsh-dev/DSH-better-sidebar",
+      "url": "https://github.com/omdsh-dev/DSH-better-sidebar",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["ui", "files", "terminal", "git"],
+      "function": "A service-oriented right-sidebar and bottom-panel workbench with files, previews, browser, terminal, Git, background tasks, and extension APIs.",
+      "audiences": ["developers who want a lightweight IDE inside DSH", "plugin developers building sidebar extensions"],
+      "install": {
+        "command": "npx -y --package @deepseek-ai/dsh dsh plugin --profile web add dsh-better-sidebar",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Enable the core file, Git, and task tabs first; add terminal and browser capabilities only after the basic layout is stable.",
+      "caveats": ["Keep the content sandbox enabled", "Windows terminal support may depend on node-pty prebuilt binaries"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 890,
+        "forks": 49,
+        "created_at": "2026-08-07T16:04:00Z",
+        "pushed_at": "2026-08-15T07:53:38Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-deep-whale",
+      "name": "dsh-deep-whale",
+      "repository": "Small-tailqwq/dsh-deep-whale",
+      "url": "https://github.com/Small-tailqwq/dsh-deep-whale",
+      "tier": "popular",
+      "type": "theme",
+      "categories": ["theme", "appearance"],
+      "function": "A DeepSeek Harness Web theme series featuring the community whale character in light and dark variants.",
+      "audiences": ["streamers", "community creators", "users who want a themed DSH workspace"],
+      "install": {
+        "command": "dsh plugin --profile web add ../dsh-deep-whale/maid-atelier",
+        "profile": "web",
+        "pinned": false,
+        "source": "git-clone-subdirectory"
+      },
+      "tip": "Keep themes separate from functional plugins and disable the theme first when diagnosing UI conflicts.",
+      "caveats": ["CC BY-NC-SA prohibits commercial use", "Attribution and share-alike requirements apply"],
+      "license": "CC-BY-NC-SA-4.0",
+      "metrics": {
+        "stars": 727,
+        "forks": 23,
+        "created_at": "2026-08-13T13:02:14Z",
+        "pushed_at": "2026-08-15T05:24:55Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-vision-toolkit",
+      "name": "DSH Vision Toolkit",
+      "repository": "Anionex/dsh-vision-toolkit",
+      "url": "https://github.com/Anionex/dsh-vision-toolkit",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["vision", "ocr", "ui-testing"],
+      "function": "Ten agent-callable visual tools for image QA, long-screenshot OCR, crop, pixel and color checks, geometry, UI reconstruction, and visual diffs.",
+      "audiences": ["frontend developers", "design QA", "GUI automation engineers"],
+      "install": {
+        "command": "dsh plugin --profile web add @anionex/dsh-vision-toolkit",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Use local crop, pixel, color, and HTML tools without credentials; configure remote vision only for tasks that require it.",
+      "caveats": ["Requires Python 3.11+ and pnpm", "Web and headless profiles require separate installation"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 382,
+        "forks": 18,
+        "created_at": "2026-08-13T12:36:34Z",
+        "pushed_at": "2026-08-14T18:44:08Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-ads",
+      "name": "dsh-ads",
+      "repository": "Nagi-ovo/dsh-ads",
+      "url": "https://github.com/Nagi-ovo/dsh-ads",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["fun", "ui"],
+      "function": "Adds parody portal ads, fake games, popups, and plugin promotion slots to the DSH Web UI.",
+      "audiences": ["streamers", "community demos", "users who want playful waiting states"],
+      "install": {
+        "command": "dsh plugin --profile web add github:Nagi-ovo/dsh-ads",
+        "profile": "web",
+        "pinned": false,
+        "source": "github"
+      },
+      "tip": "Disable individual ad slots in Settings and keep only the inference-wait placement for a less disruptive experience.",
+      "caveats": ["Entertainment only", "An explicit user-triggered verification action queries GitHub star state"],
+      "license": "BSD-3-Clause",
+      "metrics": {
+        "stars": 370,
+        "forks": 2,
+        "created_at": "2026-08-09T19:06:36Z",
+        "pushed_at": "2026-08-14T23:22:57Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-agent-teams",
+      "name": "dsh-agent-teams",
+      "repository": "NanmiCoder/dsh-agent-teams",
+      "url": "https://github.com/NanmiCoder/dsh-agent-teams",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["multi-agent", "workflow"],
+      "function": "Turns the current session into a captain that coordinates durable subagents, dependency-aware tasks, messages, and a live activity panel.",
+      "audiences": ["research teams", "software-delivery teams", "multi-perspective reviewers"],
+      "install": {
+        "command": "dsh plugin --profile web add @nanmicoder/dsh-agent-teams",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Start with three roles and explicit deliverables; more agents increase coordination and model-quota cost.",
+      "caveats": ["Team state is not coordinated across multiple DSH processes writing the same workspace", "Agents may finish without updating task state"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 286,
+        "forks": 24,
+        "created_at": "2026-08-12T13:41:50Z",
+        "pushed_at": "2026-08-14T21:06:35Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-at-file",
+      "name": "dsh-at-file",
+      "repository": "omdsh-dev/dsh-at-file",
+      "url": "https://github.com/omdsh-dev/dsh-at-file",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["files", "ui", "productivity"],
+      "function": "Adds `@` path search and structured workspace-relative file or directory references to the Web composer.",
+      "audiences": ["developers with large repositories", "users who frequently reference project files"],
+      "install": {
+        "command": "dsh plugin --profile web add https://github.com/omdsh-dev/dsh-at-file/archive/refs/tags/v0.6.0.tar.gz",
+        "profile": "web",
+        "pinned": true,
+        "source": "github-release-archive"
+      },
+      "tip": "Use path-fragment searches and workspace filters to avoid indexing generated or dependency directories.",
+      "caveats": ["References paths but does not read file contents", "Format support depends on tools mounted in the session"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 163,
+        "forks": 7,
+        "created_at": "2026-08-13T12:00:09Z",
+        "pushed_at": "2026-08-14T16:15:06Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "dsh-plugin-topic"]
+    },
+    {
+      "id": "dsh-market",
+      "name": "dsh-market",
+      "repository": "dsh-market/dsh-market",
+      "url": "https://github.com/dsh-market/dsh-market",
+      "tier": "popular",
+      "type": "bundle",
+      "categories": ["plugin-management", "discovery"],
+      "function": "An in-DSH marketplace for browsing, searching, installing, updating, uninstalling, and switching plugins and themes.",
+      "audiences": ["new DSH users", "Web users who prefer graphical plugin management"],
+      "install": {
+        "command": "dsh plugin --profile web add dshmarket",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Use the market for discovery and installation, but independently review source, version, and permissions for every plugin.",
+      "caveats": ["Curated listing is not a security audit", "Third-party code still runs with local user permissions"],
+      "license": "UNKNOWN",
+      "metrics": {
+        "stars": 145,
+        "forks": 14,
+        "created_at": "2026-08-14T04:58:15Z",
+        "pushed_at": "2026-08-15T06:43:24Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "awesome-dsh-plugin-recommendation"]
+    },
+    {
+      "id": "dsh-find-plugin",
+      "name": "dsh-find-plugin",
+      "repository": "awesome-dsh-plugin/dsh-find-plugin",
+      "url": "https://github.com/awesome-dsh-plugin/dsh-find-plugin",
+      "tier": "rising",
+      "type": "bundle",
+      "categories": ["plugin-discovery", "agent-tool"],
+      "function": "Lets the agent search the public dsh-plugin topic, rerank by stars, and return descriptions and install commands.",
+      "audiences": ["users who know the capability they want but not the plugin name"],
+      "install": {
+        "command": "dsh plugin --profile web add dsh-find-plugin",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm"
+      },
+      "tip": "Ask with a concrete capability and require maintenance, permission, and compatibility signals alongside each result.",
+      "caveats": ["GitHub topic pollution can affect results", "Star ranking is not a quality or safety review"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 20,
+        "forks": 1,
+        "created_at": "2026-08-14T01:46:59Z",
+        "pushed_at": "2026-08-14T13:17:47Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "community-discussion"]
+    },
+    {
+      "id": "weshop-dsh-plugin",
+      "name": "WeShop for DSH",
+      "repository": "weshopai/weshop-dsh-plugin",
+      "url": "https://github.com/weshopai/weshop-dsh-plugin",
+      "tier": "rising",
+      "type": "bundle",
+      "categories": ["image-generation", "video-generation", "ecommerce"],
+      "function": "Adds an e-commerce visual canvas for product imagery, virtual try-on, background edits, batches, and short video generation.",
+      "audiences": ["e-commerce operators", "product photographers", "visual marketers"],
+      "install": {
+        "command": "npx weshop-dsh-plugin setup",
+        "profile": "web",
+        "pinned": false,
+        "source": "npm-installer"
+      },
+      "tip": "Close Harness during setup and test with low-value assets before processing production product imagery.",
+      "caveats": ["Requires WeShop API credentials and quota", "Review service terms and data policy for sensitive assets"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 6,
+        "forks": 0,
+        "created_at": "2026-08-14T05:18:36Z",
+        "pushed_at": "2026-08-14T16:21:52Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "community-discussion"]
+    },
+    {
+      "id": "dsh-guardian",
+      "name": "dsh-guardian",
+      "repository": "lonelymoon87/dsh-guardian",
+      "url": "https://github.com/lonelymoon87/dsh-guardian",
+      "tier": "rising",
+      "type": "bundle",
+      "categories": ["security", "policy", "redaction"],
+      "function": "Adds pre-execution dangerous-operation policy checks, post-execution credential redaction, and a read-only security-review workflow.",
+      "audiences": ["users who let agents run shell commands", "shared development machines", "security-conscious DSH users"],
+      "install": {
+        "command": "dsh plugin --profile web add github:lonelymoon87/dsh-guardian#v0.1.2",
+        "profile": "web",
+        "pinned": true,
+        "source": "github-tag"
+      },
+      "tip": "Start with the standard profile to observe false positives before enabling strict mode.",
+      "caveats": ["Targets DSH 0.1.0-rc.6", "Not a sandbox, authorization system, or DLP service"],
+      "license": "MIT",
+      "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "created_at": "2026-08-13T18:18:34Z",
+        "pushed_at": "2026-08-14T02:54:27Z"
+      },
+      "verified_sources": ["repository-readme", "github-api", "awesome-dsh-plugin-listing"]
+    }
+  ]
+}
