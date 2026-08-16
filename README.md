@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  不只给你一串链接——每个插件都写清楚：<strong>能做什么、适合谁、怎么安装、有哪些好用 Tips，以及哪里容易踩坑。</strong>
+  不只给你一串链接——每个插件都写清楚：<strong>能做什么、适合谁、怎么安装、装完第一步怎么用，以及哪里容易踩坑。</strong>
 </p>
 
 <p align="center">
@@ -17,13 +17,14 @@
   <a href="https://github.com/gityuanbao/DSH-Plugins/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/gityuanbao/DSH-Plugins?style=flat-square&logo=github&color=7c3aed"></a>
   <img alt="Curated plugins" src="https://img.shields.io/badge/精选插件-16-06b6d4?style=flat-square">
   <img alt="Categories" src="https://img.shields.io/badge/覆盖场景-7_类-22c55e?style=flat-square">
-  <img alt="Last verified" src="https://img.shields.io/badge/最近核验-2026--08--15-f59e0b?style=flat-square">
+  <img alt="Last verified" src="https://img.shields.io/badge/最近核验-2026--08--16-f59e0b?style=flat-square">
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-64748b?style=flat-square"></a>
 </p>
 
 <p align="center">
   <a href="#-30-秒找到适合你的插件">30 秒选插件</a> ·
   <a href="#-直接抄作业4-套好用组合">直接抄作业</a> ·
+  <a href="docs/PLAYBOOKS.md">上手玩法</a> ·
   <a href="#-全部-16-个插件一张表看完">全部插件</a> ·
   <a href="#-热门精选逐个看">详细介绍</a> ·
   <a href="https://github.com/gityuanbao/DSH-Plugins/issues/new/choose">推荐新插件</a>
@@ -38,10 +39,10 @@
 
 ## ✨ 这个合集能帮你什么
 
-| 🔍 更快找到 | 🧭 更容易选对 | 💡 装完更好用 |
+| 🔍 更快找到 | 🧭 更容易选对 | 💡 装完真会用 |
 |---|---|---|
 | 按工作台、视觉、多 Agent、安全、效率等场景整理 | 告诉你“适合谁”，也告诉你哪些插件功能重叠 | 每个项目都有一条实测思路或贴心 Tips |
-| 热门项目与刚冒头的新锐项目分开 | 不拿 Star 数直接等同于质量 | 安装命令、版本要求和常见风险放在一起 |
+| 热门项目与刚冒头的新锐项目分开 | 不拿 Star 数直接等同于质量 | 把作者 README 里最好用的步骤压缩成中文玩法 |
 
 ## 🎯 30 秒找到适合你的插件
 
@@ -83,6 +84,23 @@
 
 一个负责把工作台变成鲸鱼娘主题，一个负责把等待过程变成 2005 年门户网站。适合直播、演示和想让 DSH 更有个性的人。
 
+## 🧪 不只是收录：这里还有 16 份「装完就能抄」的玩法
+
+很多插件不是装上就会用。我们继续读完了作者 README，把最有价值的操作缩成一份 [中文玩法手册](docs/PLAYBOOKS.md)：
+
+| 装完以后 | 你可以直接抄什么 |
+|---|---|
+| 第一次让 DeepSeek 看图 | ModLens 健康检查 + 一段结构化看图提示词 |
+| 第一次做视觉验证 | `定位 → 裁剪 → 看细节` 与像素对比工作流 |
+| 第一次做代码体检 | `Health → Review → Audit → Sweep` 的安全顺序 |
+| 第一次组 Agent 小队 | 性能 / 安全 / 产品三角色审查提示词 |
+| 第一次用终端版 DSH | 最值得先记住的 6 个快捷键 |
+| 第一次验证安全插件 | 用虚构凭证测脱敏，不拿危险命令“试刀” |
+
+<p align="center">
+  <strong><a href="docs/PLAYBOOKS.md">打开完整玩法手册：16 个插件逐个照着做 →</a></strong>
+</p>
+
 ## 🗺️ 全部 16 个插件，一张表看完
 
 | 类别 | 插件 | 它最擅长什么 | 最适合谁 |
@@ -104,7 +122,7 @@
 | 🎨 主题 | [dsh-deep-whale](#dsh-deep-whale) | 鲸鱼娘主题皮肤 | 直播、展示、个性化用户 |
 | 🎮 整活 | [dsh-ads](#dsh-ads) | 复古广告与推理中插播 | 社区演示、直播整活 |
 
-> 表里的 Star、版本和安装方式核验于 **2026-08-15**。DSH 仍处于 Developer Preview，升级后请顺手回到原项目 README 看一眼最新说明。
+> 表里的 Star、版本和安装方式首次核验于 **2026-08-15**，玩法文档复核于 **2026-08-16**。DSH 仍处于 Developer Preview，升级后请顺手回到原项目 README 看一眼最新说明。
 
 ## 🔥 热门精选，逐个看
 
@@ -117,6 +135,7 @@
 
 - **适合你，如果：** 你准备把 DSH 当主力工作台，希望一次补齐大部分界面能力。
 - **💡 好用 Tips：** 只需要看板、SSH 或宠物时，优先安装对应子包；冲突更少，排错也更容易。
+- **🚀 第一次这样用：** [先跑全家桶，再按需做减法 →](docs/PLAYBOOKS.md#play-dsh-web-ui)
 - **⚠️ 装前知道：** 全家桶权限面较大。第一次不要同时叠加另一个重型侧边栏框架；pnpm 11 用户还要看项目里的 hoisted 布局说明。
 
 ```sh
@@ -132,6 +151,7 @@ dsh plugin --profile web add @linxin666/dsh-web-ui-all
 
 - **适合你，如果：** 你要做前端还原、截图排错、文档 OCR 或看图问答，又不想更换主模型。
 - **💡 好用 Tips：** 第一次先跑项目提供的健康检查，再选择名字里带 `(modlens vision)` 的路由；固定版本比追 `latest` 更容易复现。
+- **🚀 第一次这样用：** [跑健康检查，再照抄结构化看图提示词 →](docs/PLAYBOOKS.md#play-modlens)
 - **⚠️ 装前知道：** 图片可能会发往你配置或复用的外部视觉服务，先确认实际调用哪家引擎、消耗哪份额度。
 
 ```sh
@@ -147,6 +167,7 @@ npx -y @deepseek-ai/dsh plugin --profile web add @liustack/modlens@3.16.6
 
 - **适合你，如果：** 你负责 Code Review、维护遗留系统，或者希望 Agent 的建议更有工程依据。
 - **💡 好用 Tips：** 先用 `/brooks-review` 或 `/brooks-health` 做只读体检，再决定要不要执行自动修复。
+- **🚀 第一次这样用：** [按 Health → Review → Sweep 的顺序体检 →](docs/PLAYBOOKS.md#play-brooks-lint)
 - **⚠️ 装前知道：** 它是 DSH 可发现的 Skill Pack，不是 Cordis Bundle；安装时要保留项目要求的扁平目录结构。
 
 ```sh
@@ -162,6 +183,7 @@ npx -y @deepseek-ai/dsh plugin --profile web add @liustack/modlens@3.16.6
 
 - **适合你，如果：** 你在做模型基准测试，或研究首轮工具分布对 DeepSeek 表现的影响。
 - **💡 好用 Tips：** 一定从空白会话开始，并按项目 Verify 清单检查前两次 `request/header`。
+- **🚀 第一次这样用：** [做一组可复现的 Standard / Anchored 对照 →](docs/PLAYBOOKS.md#play-anchored-standard)
 - **⚠️ 装前知道：** 特定 Project2 高分不能外推成通用性能提升；当前主要兼容证据针对 DSH `0.1.0-rc.5`。
 
 ```sh
@@ -177,6 +199,7 @@ cp -R preset ~/.dsh/.agent-presets/anchored-standard
 
 - **适合你，如果：** 你长期待在终端、偏好键盘操作，也想实时观察 Agent 状态。
 - **💡 好用 Tips：** macOS Terminal 会抢走部分 `⌘` 快捷键，优先记住项目提供的 `Ctrl` 组合。
+- **🚀 第一次这样用：** [先记住 6 个键，再恢复一段旧会话 →](docs/PLAYBOOKS.md#play-dsh-tui)
 - **⚠️ 装前知道：** 要求 Node `^22.19` 或 `>=24`；它复用 DSH 当前 Profile 的安全边界，不另送一套沙箱。
 
 ```sh
@@ -192,6 +215,7 @@ npm install -g @deepseek-ai/dsh @deepseek-harness-tui/dsh-tui
 
 - **适合你，如果：** 你要做架构改造、复杂修复或规格驱动开发，最怕 Agent “凭感觉完工”。
 - **💡 好用 Tips：** 安装后用 `dsh --profile web --dump-config` 确认只出现一个 `aegis-method-pack`，再在新会话显式加载 `using-aegis`。
+- **🚀 第一次这样用：** [用一句 Aegis goal 锁定边界和成功证据 →](docs/PLAYBOOKS.md#play-aegis)
 - **⚠️ 装前知道：** 不要同时把 Aegis 放进多个 Skills 目录，否则容易出现重复技能源。
 
 ```sh
@@ -207,6 +231,7 @@ dsh plugin --profile web add github:GanyuanRan/Aegis
 
 - **适合你，如果：** 你想要 IDE 式体验，但不想安装一整套 UI 全家桶。
 - **💡 好用 Tips：** 先只开文件、Git、任务三个核心 Tab，稳定后再逐个启用终端和浏览器。
+- **🚀 第一次这样用：** [用三个核心面板跑一次“打开、修改、看 diff” →](docs/PLAYBOOKS.md#play-better-sidebar)
 - **⚠️ 装前知道：** 保持内容沙箱开启；Windows 终端能力可能受 `node-pty` 预编译产物影响。
 
 ```sh
@@ -222,6 +247,7 @@ npx -y --package @deepseek-ai/dsh dsh plugin --profile web add dsh-better-sideba
 
 - **适合你，如果：** 你想个性化工作台、直播展示，或者单纯觉得默认界面还不够有趣。
 - **💡 好用 Tips：** 主题和功能插件分开装；遇到界面问题时，先单独禁用主题最容易定位。
+- **🚀 第一次这样用：** [60 秒切一次亮色 / 暗色鲸鱼娘主题 →](docs/PLAYBOOKS.md#play-deep-whale)
 - **⚠️ 装前知道：** 许可证禁止商业使用。商业视频、课程或品牌项目使用前要确认许可边界。
 
 ```sh
@@ -237,6 +263,7 @@ dsh plugin --profile web add ../dsh-deep-whale/maid-atelier
 
 - **适合你，如果：** 你做前端、设计 QA、GUI 自动化，需要可测量、可复核的视觉证据。
 - **💡 好用 Tips：** 本地裁剪、像素、颜色与 HTML 操作不需要视觉 API；远程工具再单独配 Credential。
+- **🚀 第一次这样用：** [照抄“定位 → 裁剪 → 看细节”视觉链路 →](docs/PLAYBOOKS.md#play-vision-toolkit)
 - **⚠️ 装前知道：** 需要 Python 3.11+ 与 pnpm；它和 ModLens 有重叠，建议先选一个跑通真实任务。
 
 ```sh
@@ -252,6 +279,7 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 
 - **适合你，如果：** 你要做社区演示、直播整活，或者想让等待时间更有戏剧效果。
 - **💡 好用 Tips：** 广告位都能单独关闭；只保留“推理等待位”，通常最好笑也最不影响操作。
+- **🚀 第一次这样用：** [只开一个等待广告位，先试节目效果 →](docs/PLAYBOOKS.md#play-ads)
 - **⚠️ 装前知道：** 这是纯娱乐插件，不要期待它提升模型性能。
 
 ```sh
@@ -267,6 +295,7 @@ dsh plugin --profile web add github:Nagi-ovo/dsh-ads
 
 - **适合你，如果：** 你要做多角度代码审查、研究或复杂交付拆解。
 - **💡 好用 Tips：** 从“研究 / 实现 / 审查”三个角色起步，每个角色都写清交付物；Agent 越多不一定越快。
+- **🚀 第一次这样用：** [复制一段三角色审查提示词 →](docs/PLAYBOOKS.md#play-agent-teams)
 - **⚠️ 装前知道：** 同一工作区的团队状态不支持多个 DSH 进程同时写入；Captain 要复核任务状态。
 
 ```sh
@@ -282,6 +311,7 @@ dsh plugin --profile web add @nanmicoder/dsh-agent-teams
 
 - **适合你，如果：** 你经常要指定代码、文档、图片或整个目录，又不想手敲长路径。
 - **💡 好用 Tips：** 用过滤规则排除大目录；同名文件多时，搜 `src/view` 这样的路径片段更准。
+- **🚀 第一次这样用：** [用路径片段准确引用一个同名文件 →](docs/PLAYBOOKS.md#play-at-file)
 - **⚠️ 装前知道：** 它只附加路径，不自动读取文件内容；PDF、Office 能不能处理仍取决于当前工具。
 
 ```sh
@@ -297,6 +327,7 @@ dsh plugin --profile web add https://github.com/omdsh-dev/dsh-at-file/archive/re
 
 - **适合你，如果：** 你不想反复复制命令，希望用图形界面管理插件。
 - **💡 好用 Tips：** 把它当“发现与安装器”，别当安全认证；安装前仍要看来源、版本和所需权限。
+- **🚀 第一次这样用：** [完成一次“看来源 → 安装 → 验证 → 卸载” →](docs/PLAYBOOKS.md#play-market)
 - **⚠️ 装前知道：** 第三方代码仍以本机权限运行，精选目录不能代替源码审查。
 
 ```sh
@@ -316,6 +347,7 @@ dsh plugin --profile web add dshmarket
 
 - **适合你，如果：** 你知道想增加什么能力，但不知道插件叫什么。
 - **💡 好用 Tips：** 问“找能在微信里审批 DSH 请求的插件”，比只搜“通知”有效；顺便让 Agent 给出权限面和最近更新时间。
+- **🚀 第一次这样用：** [复制一段“只找不装”的插件搜索提示词 →](docs/PLAYBOOKS.md#play-find-plugin)
 - **⚠️ 装前知道：** Topic 有标签污染，排在前面不代表它真是原生插件，更不代表安全。
 
 ```sh
@@ -331,6 +363,7 @@ dsh plugin --profile web add dsh-find-plugin
 
 - **适合你，如果：** 你做电商运营、商品摄影或视觉营销，需要批量产出创意变体。
 - **💡 好用 Tips：** 先用低价值素材跑通 API Key、画布保存和导出，再导入正式商品资产。
+- **🚀 第一次这样用：** [用测试商品图跑通背景替换与导出 →](docs/PLAYBOOKS.md#play-weshop)
 - **⚠️ 装前知道：** 依赖 WeShop API 与额度；敏感产品图和客户数据要先核对服务条款。
 
 ```sh
@@ -346,6 +379,7 @@ npx weshop-dsh-plugin setup
 
 - **适合你，如果：** 你经常让 Agent 执行命令、读取日志，或在共享开发机上使用 DSH。
 - **💡 好用 Tips：** 先用 `standard` 观察误报，再考虑 `strict`；优先安装固定 Release。
+- **🚀 第一次这样用：** [用虚构凭证验证脱敏与审批提醒 →](docs/PLAYBOOKS.md#play-guardian)
 - **⚠️ 装前知道：** 它是策略层，不是进程沙箱、权限系统或 DLP，不能替代系统级隔离。
 
 ```sh
@@ -394,6 +428,7 @@ DSH 插件会以你的本机权限运行，可能读取文件、使用凭证或�
 - **热门和新锐分开**：新项目可以被看见，但不会被包装成已经成熟。
 - **功能重叠会提醒**：例如 ModLens 与 Vision Toolkit、两个重型 Web 工作台，不会假装它们全都应该一起装。
 - **风险不藏起来**：许可证、外部服务、版本要求和权限面会明确写出来。
+- **原 README 不白读**：好用的命令、提示词与工作流会缩成 [16 份中文玩法](docs/PLAYBOOKS.md)，同时保留原文入口。
 - **数据可复用**：完整结构化目录在 [data/plugins.json](data/plugins.json)，来源在 [docs/SOURCES.md](docs/SOURCES.md)。
 
 更详细的筛选规则见 [收录与核验方法](docs/METHODOLOGY.md)。Star 是核验日的 GitHub API 快照，只代表关注度，不代表质量或安全。
