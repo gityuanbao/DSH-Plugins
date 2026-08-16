@@ -15,6 +15,6 @@
 - [ ] README 与 `data/plugins.json` 已同步
 - [ ] 安装命令来自项目一手文档
 - [ ] 功能、适用人群、Tip 与 Caveat 均已填写
+- [ ] 作者有详细用法时，已将第一次任务、步骤、跑通标志与原文入口补进 `docs/PLAYBOOKS.md`
 - [ ] 没有把 Star 或收录写成安全/质量背书
 - [ ] 已运行 `npm run validate`
-

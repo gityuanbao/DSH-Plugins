@@ -63,6 +63,17 @@ body:
       required: true
 
   - type: textarea
+    id: first_play
+    attributes:
+      label: 最值得收进玩法手册的用法
+      description: 如果作者 README 有详细玩法，请写一个第一次体验任务、关键步骤、跑通标志，并附对应原文小节链接
+      placeholder: |
+        第一次任务：
+        操作步骤：
+        跑通标志：
+        原文链接：
+
+  - type: textarea
     id: risk
     attributes:
       label: 权限、成本与风险
@@ -87,4 +98,3 @@ body:
           required: true
         - label: 我理解收录不代表推荐或安全背书
           required: true
-
